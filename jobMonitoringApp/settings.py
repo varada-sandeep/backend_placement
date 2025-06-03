@@ -58,6 +58,7 @@ CSRF_TRUSTED_ORIGINS = [
     "http://localhost:5500",  # Alternative localhost
     "http://127.0.0.1:3000",  # If using other dev servers
     "http://localhost:3000",
+'https://backend-placement-m7c6.onrender.com'
 ]
 CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:5500",  # Live Server
