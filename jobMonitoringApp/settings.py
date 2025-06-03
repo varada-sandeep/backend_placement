@@ -64,6 +64,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:5500",  # Alternative localhost
     "http://127.0.0.1:3000",  # If using other dev servers
     "http://localhost:3000",
+'https://backend-placement-m7c6.onrender.com'
 ]
 
 # Allow credentials (required for session-based auth)
