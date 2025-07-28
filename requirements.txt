@@ -1,9 +1,20 @@
-asgiref==3.8.1
-dj-database-url==2.3.0
-Django==5.2
-django-cors-headers==4.7.0
-psycopg2==2.9.10
-sqlparse==0.5.3
-typing_extensions==4.13.2
-tzdata==2025.2
-python-dotenv==1.1.0
+asgiref==3.8.1             # Already compatible
+dj-database-url==1.2.0    # Downgrade
+Django==3.2               # Your forced version
+django-cors-headers==3.6.0 # Downgrade to meet label-studio's older requirement
+psycopg2==2.9.10          # (Only if you're using PostgreSQL. If not, remove.)
+sqlparse==0.5.3           # Already compatible
+typing_extensions==4.13.2 # Check if needed, often compatible across versions
+tzdata==2025.2            # Already compatible
+python-dotenv==1.1.0      # Should be compatible
+
+channels==3.0.5           # Downgrade
+djangorestframework==3.12.4 # Downgrade
+djangorestframework-simplejwt==5.0.0 # Downgrade
+django-allauth==0.51.0    # Downgrade
+django-bootstrap3==21.0   # Downgrade (or remove if not used)
+django-bootstrap4==21.0   # Downgrade (or remove if not used)
+django-filter==22.1       # Downgrade
+# django-twilio: Needs investigation. Might need to be removed or find a very old version.
+# label-studio: THIS IS THE BIGGEST HURDLE. If you need label-studio 1.18, you CANNOT use Django 3.2.
+# You MUST find a label-studio version that works with Django 3.2, or upgrade MySQL.

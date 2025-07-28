@@ -123,16 +123,19 @@ WSGI_APPLICATION = 'jobMonitoringApp.wsgi.application'
 #     }
 # }
 
-import dj_database_url
 from dotenv import load_dotenv
 load_dotenv()
+import os
 # Replace the DATABASES section of your settings.py with this
 DATABASES = {
-    "default": dj_database_url.config(
-        default=load_dotenv("DATABASE_URL"),
-        conn_max_age=600,
-        ssl_require=True,
-    )
+    "default": {
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": os.getenv("databasename"),  # Your full database name
+        "USER": os.getenv('databaseuser'),  # Replace with your actual MySQL user (created in cPanel)
+        "PASSWORD": os.getenv('databasepassword'),  # The password you set
+        "HOST": os.getenv('databasehost'),  # Not localhost
+        "PORT": os.getenv('databaseport'),  # Default MySQL port
+    }
 }
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
