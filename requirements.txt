@@ -7,7 +7,7 @@ sqlparse==0.5.3           # Already compatible
 typing_extensions==4.13.2 # Check if needed, often compatible across versions
 tzdata==2025.2            # Already compatible
 python-dotenv==1.1.0      # Should be compatible
-
+pytz==2025.2
 channels==3.0.5           # Downgrade
 djangorestframework==3.12.4 # Downgrade
 djangorestframework-simplejwt==5.0.0 # Downgrade
