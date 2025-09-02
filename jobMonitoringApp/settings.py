@@ -54,18 +54,13 @@ MIDDLEWARE = [
 ]
 CORS_ALLOW_ALL_ORIGINS = True  # only for de
 CSRF_TRUSTED_ORIGINS = [
-    "http://127.0.0.1:5500",  # Live Server
-    "http://localhost:5500",  # Alternative localhost
-    "http://127.0.0.1:3000",  # If using other dev servers
-    "http://localhost:3000",
-'https://backend-placement-m7c6.onrender.com'
+
+'https://backend-placement-m7c6.onrender.com',
+'https://placementportal-d36cc.web.app'
 ]
 CORS_ALLOWED_ORIGINS = [
-    "http://127.0.0.1:5500",  # Live Server
-    "http://localhost:5500",  # Alternative localhost
-    "http://127.0.0.1:3000",  # If using other dev servers
-    "http://localhost:3000",
-'https://backend-placement-m7c6.onrender.com'
+    "https://backend-placement-m7c6.onrender.com",
+    "https://placementportal-d36cc.web.app",
 ]
 
 # Allow credentials (required for session-based auth)
